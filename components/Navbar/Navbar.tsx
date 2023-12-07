@@ -30,7 +30,7 @@ export function Navbar() {
             <Link href='/sell' className={styles.link}>
               Voting Record
             </Link>
-            <Link href='/sell' className={styles.link}>
+            <Link href='/github' className={styles.link}>
               github
             </Link>
           </div>

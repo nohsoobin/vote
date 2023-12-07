@@ -23,38 +23,6 @@ export default function Sell() {
   return (
     <Container maxWidth='lg'>
       <h1>Voting Record</h1>
-      {!selectedNft ? (
-        <>
-          <p>당신이 투표한 기록입니다.</p>
-          <NFTGrid
-            data={data}
-            isLoading={isLoading}
-            overrideOnclickBehavior={(nft) => {
-              setSelectedNft(nft);
-            }}
-            emptyText={"아무 투표를 하지 않으셨군요!"}
-          />
-        </>
-      ) : (
-        <div className={tokenPageStyles.container} style={{ marginTop: 0 }}>
-          <div className={tokenPageStyles.metadataContainer}>
-            <div className={tokenPageStyles.imageContainer}>
-              <ThirdwebNftMedia
-                metadata={selectedNft.metadata}
-                className={tokenPageStyles.image}
-              />
-              <button
-                onClick={() => {
-                  setSelectedNft(undefined);
-                }}
-                className={tokenPageStyles.crossButton}
-              >
-                X
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
     </Container>
   );
 }

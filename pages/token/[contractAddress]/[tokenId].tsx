@@ -116,8 +116,8 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
   return (
     <>
-      <Toaster position="bottom-center" reverseOrder={false} />
-      <Container maxWidth="lg">
+      <Toaster position='bottom-center' reverseOrder={false} />
+      <Container maxWidth='lg'>
         <div className={styles.container}>
           <div className={styles.metadataContainer}>
             <ThirdwebNftMedia
@@ -184,7 +184,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                       <Link
                         className={styles.txHashArrow}
                         href={`${ETHERSCAN_URL}/tx/${event.transaction.transactionHash}`}
-                        target="_blank"
+                        target='_blank'
                       >
                         ↗
                       </Link>
@@ -233,7 +233,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                 <p className={styles.label}>Price</p>
                 <div className={styles.pricingValue}>
                   {loadingContract || loadingDirect || loadingAuction ? (
-                    <Skeleton width="120" height="24" />
+                    <Skeleton width='120' height='24' />
                   ) : (
                     <>
                       {directListing && directListing[0] ? (
@@ -255,7 +255,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
 
                 <div>
                   {loadingAuction ? (
-                    <Skeleton width="120" height="24" />
+                    <Skeleton width='120' height='24' />
                   ) : (
                     <>
                       {auctionListing && auctionListing[0] && (
@@ -281,7 +281,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
             </div>
 
             {loadingContract || loadingDirect || loadingAuction ? (
-              <Skeleton width="100%" height="164" />
+              <Skeleton width='100%' height='164' />
             ) : (
               <>
                 <Web3Button
@@ -316,7 +316,7 @@ export default function TokenPage({ nft, contractMetadata }: Props) {
                     auctionListing?.[0]?.minimumBidCurrencyValue
                       ?.displayValue || 0
                   }
-                  type="number"
+                  type='number'
                   step={0.000001}
                   onChange={(e) => {
                     setBidValue(e.target.value);
